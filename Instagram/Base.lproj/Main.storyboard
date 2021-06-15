@@ -17,6 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="WON-xN-Tqh" kind="relationship" relationship="viewControllers" id="d4g-uz-Uww"/>
@@ -29,11 +30,11 @@
             </objects>
             <point key="canvasLocation" x="1083" y="-328"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="gLf-fu-u3N">
             <objects>
                 <navigationController id="WON-xN-Tqh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wfq-Zu-XEQ"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="wfq-Zu-XEQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dGO-ju-7FQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -62,11 +63,11 @@
             </objects>
             <point key="canvasLocation" x="-268" y="1191"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="n3l-IE-qGH">
             <objects>
                 <navigationController id="ihR-vG-zfI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zMZ-ey-hst"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="zMZ-ey-hst"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ULz-HD-LDf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -79,11 +80,11 @@
             </objects>
             <point key="canvasLocation" x="2368" y="459"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Vca-xE-t1h">
             <objects>
                 <navigationController id="WV7-2B-qCQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FB2-H9-6eu"/>
+                    <tabBarItem key="tabBarItem" title="" image="bell" catalog="system" id="FB2-H9-6eu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sSK-H1-r1a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -96,11 +97,11 @@
             </objects>
             <point key="canvasLocation" x="1688" y="459"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="KL4-em-jVo">
             <objects>
                 <navigationController id="UKh-pm-bCc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3al-aM-iPt"/>
+                    <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="3al-aM-iPt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nMv-jZ-Ktn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -113,11 +114,11 @@
             </objects>
             <point key="canvasLocation" x="1022" y="459"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="m7m-nr-d0n">
             <objects>
                 <navigationController id="mek-Zd-InW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="56u-UO-wDu"/>
+                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="56u-UO-wDu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GSF-yM-6St">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -196,6 +197,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
