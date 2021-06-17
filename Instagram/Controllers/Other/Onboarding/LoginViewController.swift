@@ -8,7 +8,6 @@
 import UIKit
 import SafariServices
 class LoginViewController: UIViewController {
-    
     //UI Codes
     internal let usernameEmailField:UITextField = {
         let field = UITextField()
@@ -37,6 +36,7 @@ class LoginViewController: UIViewController {
         field.backgroundColor = .secondarySystemBackground
         field.layer.borderWidth = 1.0
         field.layer.borderColor = UIColor.secondaryLabel.cgColor
+        field.isSecureTextEntry = true
         return field
     }()
     
@@ -139,7 +139,33 @@ class LoginViewController: UIViewController {
         //guard-let for username, email and password inputs.
         guard let usernameEmail = usernameEmailField.text, !usernameEmail.isEmpty,
               let password = passwordField.text, !password.isEmpty, password.count >= 8 else {return}
+        
+        var username:String?
+        var email:String?
+        //checking if email or username
+        if usernameEmail.contains("@"), usernameEmail.contains("."){
+            //email
+            email = usernameEmail
+        }else{
+            //username
+            username = usernameEmail
+        }
         //login functionality here
+        AuthManager.shared.loginUser(username: username, email: email, password: password) { isSuccess in
+            DispatchQueue.main.async {
+                if isSuccess{
+                    //successful login
+                    self.dismiss(animated: true, completion: nil)
+                }else{
+                    //something wrong happendedddd
+                    let alert = UIAlertController(title: "Log in Error", message: "We were unable to log you in", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+            
+        }
+        
     }
     @objc internal func didTapTermsButton(){
         guard let address = URL(string: "https://www.instagram.com/about/legal/terms/before-january-19-2013/") else {return}
@@ -154,7 +180,8 @@ class LoginViewController: UIViewController {
     }
     @objc internal func didTapCreateAccountButton(){
         let vc = RegistrationViewController()
-        present(vc, animated: true)
+        vc.title = "Create Account"
+        present(UINavigationController(rootViewController: vc), animated: true)
     }
     
 }
