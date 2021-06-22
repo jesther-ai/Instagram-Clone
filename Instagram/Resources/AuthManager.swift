@@ -11,7 +11,41 @@ class AuthManager{
     
     //MARK: - public functions
     
-    public func registerNewUser(username:String, email:String, password:String){
+    public func registerNewUser(username:String, email:String, password:String, completion:@escaping (Bool)->Void){
+        /*
+         
+         - check if email is available
+         - Create account if both available
+         - Insert account to database
+         */
+        
+        DatabaseManager.shared.canCreateNewUser(with: email, username: username) { canCreate in
+            if canCreate{
+                //- check if username is available
+                Auth.auth().createUser(withEmail: email, password: password) { result, err in
+                    guard err == nil, result != nil else{
+                        completion(false)
+                        return
+                    }
+                    //insert into database
+                    DatabaseManager.shared.insertNewUser(with: email, username: username) { inserted in
+                        if inserted {
+                            completion(true)
+                            return
+                        }
+                        else{
+                            //failed to insert to database
+                            completion(false)
+                            return
+                        }
+                    }
+                }
+            }else{
+                //username or email does not exist
+                completion(false)
+            }
+        }
+        
         
     }
     

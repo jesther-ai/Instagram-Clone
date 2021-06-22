@@ -38,3 +38,23 @@ extension LoginViewController:UITextFieldDelegate{
         return true
     }
 }
+
+extension RegistrationViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameField{
+            emailField.becomeFirstResponder()
+        }else if textField == emailField{
+            passwordField.becomeFirstResponder()
+        }else{
+            didTapRegister()
+        }
+        return true
+    }
+}
+
+extension String{
+     func safeDatabase() -> String{
+        return self.replacingOccurrences(of: "@", with: "-").replacingOccurrences(of: ".", with: "-")
+    }
+}
+

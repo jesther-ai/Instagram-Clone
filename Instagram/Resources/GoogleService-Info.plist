@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>918194393650-njhbep6uh4nkraqjht09jostjg2n09ju.apps.googleusercontent.com</string>
+	<string>457960828483-3gcd6mcf6cul3fbu594fe6nn0tfao5nd.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.918194393650-njhbep6uh4nkraqjht09jostjg2n09ju</string>
+	<string>com.googleusercontent.apps.457960828483-3gcd6mcf6cul3fbu594fe6nn0tfao5nd</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA8jjbvZdjb2FYCIQI_aaKu4kCkmfq4yWk</string>
+	<string>AIzaSyA_i-TEttOcs4ZFWlyLdhJHuIt90gCVEgw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>918194393650</string>
+	<string>457960828483</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.jesthersilvestre.Instagram</string>
 	<key>PROJECT_ID</key>
-	<string>instagram-a7545</string>
+	<string>instagram-98029</string>
 	<key>STORAGE_BUCKET</key>
-	<string>instagram-a7545.appspot.com</string>
+	<string>instagram-98029.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:918194393650:ios:1288f1c4225272bd0b622b</string>
+	<string>1:457960828483:ios:6f0068f04f974c1ee46ef6</string>
+	<key>DATABASE_URL</key>
+	<string>https://instagram-98029-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
 </plist>
